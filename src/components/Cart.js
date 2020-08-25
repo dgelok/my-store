@@ -24,14 +24,10 @@ const Cart = () => {
         
         dispatch(addStoreItems(products))
         updateIsLoaded(true)
-        console.log(storeItems)
+        // console.log(storeItems)
     }, [])
 
-    useEffect(() =>{
-        console.log(storeItems)
-    })
-
-    if (isLoaded == false) {
+    if (isLoaded === false) {
         return (<div>...loading...</div>)
     } else {
         return (
@@ -41,9 +37,11 @@ const Cart = () => {
                     <h1>Shopping Cart</h1><h3>Total Cost: {totalCost}</h3>
                 </Row>
                 <Row className="m-2">
-                    <h3>Current Items:</h3>
+                    <h3>Current Items in Cart: {currentCart.length}</h3>
                 </Row>
-                <CurrentProducts />
+                <Row className="m-2">
+                    <CurrentProducts currentCart={currentCart}/>
+                </Row>
                 <br />
                 <br />
                 <AddProduct storeItems={storeItems}/>

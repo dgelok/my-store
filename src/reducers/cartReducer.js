@@ -9,7 +9,8 @@ const cartReducer = (state=initialState, action) =>{
         case "ADD":
             return {
                 ...state,
-                cart: state.cart.concat(action.product)
+                cart: state.cart.concat(action.product),
+                totalCost: parseFloat((parseFloat(state.totalCost + parseFloat(action.product.price))).toFixed(2))
             }
 
         case "DELETE": 
