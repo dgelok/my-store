@@ -4,13 +4,14 @@ const initialState = {
     cart: []
 }
 
-const cartReducer = (state, action) =>{
+const cartReducer = (state=initialState, action) =>{
     switch (action.type) {
         case "ADD":
             return {
                 ...state,
                 cart: state.cart.concat(action.product)
             }
+
         case "DELETE": 
             let newCart = state.cart.filter(n=>{
                 return n.id !== action.product.id
@@ -19,6 +20,12 @@ const cartReducer = (state, action) =>{
                 ...state,
                 cart: newCart
             };
+            
+        case "ADD_STORE_ITEMS":
+            return {
+                ...state,
+                storeItems: action.products
+            }
         default:
             return state;
     }
