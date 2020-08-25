@@ -1,4 +1,5 @@
 import React from 'react'
+import DeleteItem from './DeleteItem'
 
 const CurrentProducts = ({ currentCart }) => {
     
@@ -7,7 +8,7 @@ const CurrentProducts = ({ currentCart }) => {
     }
     else {
         let results = currentCart.map(item =>{
-            return <li>{item.productName} - {item.price}</li>
+            return <li>{item.productName} - {item.price} <DeleteItem product={item}/></li>
         })
         return (
             <>

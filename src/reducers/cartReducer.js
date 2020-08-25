@@ -19,7 +19,8 @@ const cartReducer = (state=initialState, action) =>{
             })
             return {
                 ...state,
-                cart: newCart
+                cart: newCart,
+                totalCost: parseFloat((parseFloat(state.totalCost - parseFloat(action.product.price))).toFixed(2))
             };
             
         case "ADD_STORE_ITEMS":

@@ -14,7 +14,7 @@ const BaseLayout = (props) => {
         <Nav.Link href="/Cart">Shop</Nav.Link>
         <Nav.Link href="/Checkout">Checkout</Nav.Link> */}
         <Link className="nav-link" to="/">Home</Link>
-        <Link className="nav-link" to="/Cart">My Cart</Link>
+        <Link className="nav-link" to="/Shop">Shop</Link>
         <Link className="nav-link" to="/Checkout">Checkout</Link>
     </Nav>
     <Form inline>

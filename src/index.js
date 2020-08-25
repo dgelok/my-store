@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import BaseLayout from './components/layout/BaseLayout'
-import Cart from './components/Cart'
+import Shop from './components/Shop'
 import Checkout from './components/Checkout'
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
@@ -19,7 +19,7 @@ ReactDOM.render(
       <BaseLayout>
         <Switch>
           <Route exact path="/" component={App}/>
-          <Route path="/Cart" component={Cart}/>
+          <Route path="/Shop" component={Shop}/>
           <Route path="/Checkout" component={Checkout}/>
           <Route component={App}/>
         </Switch>

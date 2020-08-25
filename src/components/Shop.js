@@ -7,7 +7,7 @@ import {addStoreItems} from "../actions/cartActions"
 import {Container, Row} from 'react-bootstrap'
 
 
-const Cart = () => {
+const Shop = () => {
 
     // const cartContents = useSelector(state => state.cart)
     const dispatch = useDispatch();
@@ -51,4 +51,4 @@ const Cart = () => {
     }
 }
 
-export default Cart
+export default Shop
