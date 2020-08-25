@@ -7,7 +7,7 @@ const BaseLayout = (props) => {
     <>
     
   <Navbar bg="light" variant="light">
-    <Navbar.Brand href="#home">Groceries.io</Navbar.Brand>
+    <Navbar.Brand>Groceries.io</Navbar.Brand>
     <Nav className="mr-auto pl-2">
         {/* <a className="nav-link" href="#">Home <span class="sr-only">(current)</span></a> */}
         {/* <Nav.Link href="/">Home</Nav.Link>
