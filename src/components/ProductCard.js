@@ -2,6 +2,7 @@ import React from 'react'
 import {Card, Button} from 'react-bootstrap'
 import { addProduct } from '../actions/cartActions'
 import { useDispatch } from 'react-redux'
+
 const ProductCard = (props) => {
 
     const dispatch = useDispatch()
